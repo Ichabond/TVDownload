@@ -2,7 +2,8 @@
 This application lets you download the latest episode of a show by name, or downloads an arbitrary episode if an url is given
 
 ## How to use
-```usage: tvdownloader.py [-h] [-n NETWORK] [-u URL] [-s SHOW]
+```
+usage: tvdownloader.py [-h] [-n NETWORK] [-u URL] [-s SHOW]
 
 optional arguments:
   -h, --help            show this help message and exit
