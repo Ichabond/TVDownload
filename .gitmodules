@@ -1,0 +1,3 @@
+[submodule "py_hls_fetch"]
+	path = py_hls_fetch
+	url = https://github.com/Ichabond/py_hls_fetch
