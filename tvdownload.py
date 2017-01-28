@@ -17,9 +17,14 @@ def load_networks(config):
         with open(os.path.join(os.path.join(sys.path[0], "networks/"), network)) as py_file:
             code = compile(py_file.read(), network, 'exec')
             exec(code, env, env)
-            ns[network.split(".")[0]] = [env]
+            network_id = network.split(".")[0]
+            ns[network_id] = [env]
             if "init" in env:
-                ns[network.split(".")[0]][0] = env['init'](config)
+                ns[network_id][0] = env['init'](config)
+                name = ns[network_id][0].name
+                if name != network_id:
+                    ns[name] = [False]
+                    ns[name][0] = ns.pop(network_id)[0]
     return ns
 
 

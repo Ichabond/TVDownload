@@ -11,5 +11,15 @@
 			"username": "email@example.com",
 			"password": "passwordForSite"
 		}
-	}
+	},
+	"vrt": {
+    "download_url": "https://mediazone.vrt.be/api/v1/vrtvideo/assets/{dl_id}",
+    "overview_url": "https://www.vrt.be/vrtnu/",
+    "login": {
+      "url": "https://accounts.eu1.gigya.com/accounts.login",
+      "username": "email@example.com",
+      "password": "passwordForSite",
+      "apikey": "3_qhEcPa5JGFROVwu5SWKqJ4mVOIkwlFNMSKwzPDAh8QZOtHqu6L4nD5Q7lk0eXOOG"
+    }
+  }
 }
