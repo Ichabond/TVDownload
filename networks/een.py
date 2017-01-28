@@ -12,7 +12,7 @@ class Een(networks.TVNetwork):
         req = self.session.get(self.url.format(**{'dl_id': dl_id['data-video']}))
         reply = json.loads(req.text)
         targets = reply['targetUrls']
-        if 'subtitleUrls' in reply:
+        if reply['subtitleUrls']:
             r = self.session.get(reply['subtitleUrls'][0]['url'])
             if r.status_code == 200:
                 with open('video_sub.vtt', 'wb') as f:
