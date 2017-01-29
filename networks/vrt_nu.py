@@ -42,9 +42,9 @@ class VrtNu(networks.ClosedTVNetwork):
                 with open('video_sub.vtt', 'wb') as f:
                     for chunk in r.iter_content(chunk_size=128):
                         f.write(chunk)
-            for target in targets:
-                if target['type'] == 'HLS':
-                    super().download_show_all(url=target['url'])
+        for target in targets:
+            if target['type'] == 'HLS':
+                super().download_show_all(url=target['url'])
 
     def get_show_url(self, name):
         raise NotImplementedError
