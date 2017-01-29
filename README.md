@@ -20,6 +20,6 @@ As of this moment, only 2 TV networks are supported:
 * [Vier](http://www.vier.be)
 
 One archive is supported as well:
-* [VRTNu](https://vrtnu.be)
+* [VRTNu](https://www.vrt.be/vrtnu/)
 
 Support for the other networks *should* be trivial.
