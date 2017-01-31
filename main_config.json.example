@@ -21,5 +21,16 @@
       "password": "passwordForSite",
       "apikey": "3_qhEcPa5JGFROVwu5SWKqJ4mVOIkwlFNMSKwzPDAh8QZOtHqu6L4nD5Q7lk0eXOOG"
     }
+  },
+  "stievie": {
+    "download_url": "https://watch.stievie.be/",
+    "overview_url": "https://watch.stievie.be/",
+    "api_endpoint": "http://vod.medialaan.io/vod/v2/",
+    "login": {
+      "url": "https://accounts.eu1.gigya.com/accounts.login",
+      "username": "email@example.com",
+      "password": "passwordForSite",
+      "apikey": "3_OEz9nzakKMkhPdUnz41EqSRfhJg5z9JXvS4wUORkqNf2M2c1wS81ilBgCewkot97"
+    }
   }
 }
