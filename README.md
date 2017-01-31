@@ -19,7 +19,8 @@ As of this moment, only 2 TV networks are supported:
 * [Een](https://www.een.be)
 * [Vier](http://www.vier.be)
 
-One archive is supported as well:
+Two archives are supported as well:
 * [VRTNu](https://www.vrt.be/vrtnu/)
+* [Stievie](http://stievie.be/)
 
 Support for the other networks *should* be trivial.
