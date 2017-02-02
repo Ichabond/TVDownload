@@ -12,6 +12,15 @@
 			"password": "passwordForSite"
 		}
 	},
+	"vijf": {
+		"download_url": "http://vod.streamcloud.be/vijf_vod_geo/mp4:_definst_/{dl_id}.mp4/playlist.m3u8",
+		"overview_url": "http://www.vijf.be/volledige-afleveringen",
+		"login": {
+			"url": "http://www.vijf.be/user",
+			"username": "email@example.com",
+			"password": "passwordForSite"
+		}
+	},
 	"vrt": {
     "download_url": "https://mediazone.vrt.be/api/v1/vrtvideo/assets/{dl_id}",
     "overview_url": "https://www.vrt.be/vrtnu/",
