@@ -41,5 +41,16 @@
       "password": "passwordForSite",
       "apikey": "3_OEz9nzakKMkhPdUnz41EqSRfhJg5z9JXvS4wUORkqNf2M2c1wS81ilBgCewkot97"
     }
+  },
+  "vtm": {
+    "download_url": "http://vod.medialaan.io/api/1.0/item/{dl_id}/video?UID={UID}&UIDSignature={UIDSig}&signatureTimestamp={timestamp}&app_id=vtm_watch&user_network=vtm-sso",
+    "overview_url": "http://vtm.be",
+    "api_endpoint": "http://vod.medialaan.io/vod/v2/",
+    "login": {
+      "url": "https://accounts.eu1.gigya.com/accounts.login",
+      "username": "email@example.com",
+      "password": "passwordForSite",
+      "apikey": "3_OEz9nzakKMkhPdUnz41EqSRfhJg5z9JXvS4wUORkqNf2M2c1wS81ilBgCewkot97"
+    }
   }
 }
