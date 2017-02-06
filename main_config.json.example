@@ -4,7 +4,7 @@
 		"overview_url": "https://www.een.be/deze-week"
 	},
 	"vier": {
-		"download_url": "http://vod.streamcloud.be/vier_vod_geo/mp4:_definst_/{dl_id}.mp4/playlist.m3u8",
+		"download_url": "http://vod.streamcloud.be/vier_vod/mp4:_definst_/{dl_id}.mp4/playlist.m3u8",
 		"overview_url": "http://www.vier.be/volledige-afleveringen",
 		"login": {
 			"url": "http://www.vier.be/user",
