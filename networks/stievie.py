@@ -16,7 +16,7 @@ class Stievie(networks.ClosedTVNetwork):
                    "sessionExpiration": -2}
         resp = self.session.post(self.login_url, data=payload)
         json_data = resp.json()
-        resp2 = self.session.get("http://static1.watch.stievie.be//config-74f2cf2fa7982d679c7731cbf686db54.js")
+        resp2 = self.session.get("http://static2.watch.stievie.be/config-1800581f9a7cf09aaa2219562fb8dd54.js")
         apikey = re.search('medialaan:{apiKey:\"(.+?)\"', resp2.text).group(1)
         headers = {"Authorization": "apikey="+apikey}
         self.session.headers.update(headers)
@@ -51,11 +51,15 @@ class Stievie(networks.ClosedTVNetwork):
                 season_number[1] = season['id']
         # 257059160182000
         progs = self.session.get(urljoin(self.endpoint, "videos?limit=0&sort=broadcastDate&sortDirection=asc"
-                                 "&programIds{progID}&seasonIds={seasonID}".format(progID=program_id,
+                                 "&episodeIds{progID}&seasonIds={seasonID}".format(progID=program_id,
                                                                                    seasonID=season_number[1])))
         for episode in progs.json()['response']['videos']:
+            if episode_id < int(episode['episode']['id']):
+                episode_id = int(episode['episode']['id'])
+        progs = self.session.get(urljoin(self.endpoint, "videos?episodeIds={episodeID}".format(episodeID=episode_id)))
+        for video in progs.json()['response']['videos']:
             if episode_id < int(episode['id']):
-                episode_id = int(episode['id'])
+                episode_id = int(episode['id'])    
         self.session.headers['Authorization'] += "&access_token=" + self.access_token
         progs = self.session.get(urljoin(self.endpoint, "videos/{progID}/watch".format(progID=episode_id)))
         return progs.json()['response']['hls-encrypted']['url']
