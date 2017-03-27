@@ -16,7 +16,7 @@ class Stievie(networks.ClosedTVNetwork):
                    "sessionExpiration": -2}
         resp = self.session.post(self.login_url, data=payload)
         json_data = resp.json()
-        resp2 = self.session.get("http://static2.watch.stievie.be/config-1800581f9a7cf09aaa2219562fb8dd54.js")
+        resp2 = self.session.get("https://static1.watch.stievie.be/config-e8d98d8d241a3ea85670672d469ef3f4.js")
         apikey = re.search('medialaan:{apiKey:\"(.+?)\"', resp2.text).group(1)
         headers = {"Authorization": "apikey="+apikey}
         self.session.headers.update(headers)
